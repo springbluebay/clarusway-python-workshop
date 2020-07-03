@@ -21,16 +21,20 @@ def about():
 @app.route('/error')
 def error():
     return '<h1>Either you encountered an error or you are not authorized.</h1>'
+
 # Create a function named hello which returns a string of '<h1>Hello, World! </h1>'
 # and assign to the static route of ('/hello')
 @app.route('/hello')
 def hello():
     return '<h1>Hello, World! </h1>'
+
 # Create a function named admin which redirect the request to the error path
 # and assign to the route of ('/admin')
 @app.route('/admin')
 def admin():
     return redirect(url_for('error'))
+
+
 # Create a function named greet which return formatted inline html string
 # and assign to the dynamic route of ('/<name>')
 # @app.route('/<name>')
@@ -48,6 +52,7 @@ def admin():
 # </html>
 #     """
 #     return greet_format
+
 # Create a function named greet_admin which redirect the request to the hello path with param of 'Master Admin!!!!'
 # and assign to the route of ('/greet-admin')
 @app.route('/greet-admin')
@@ -75,4 +80,4 @@ def evens():
 # Add a statement to run the Flask application which can be reached from any host on port 80.
 if __name__ == '__main__':
     app.run(debug=True)
-    app.run('0.0.0.0', port=80)
+    # app.run('0.0.0.0', port=80)
