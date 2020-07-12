@@ -76,7 +76,6 @@ def list10():
 @app.route('/evens')
 def evens():
     return render_template('evens.html')
-
 # Add a statement to run the Flask application which can be reached from any host on port 80.
 if __name__ == '__main__':
     app.run(debug=True)
