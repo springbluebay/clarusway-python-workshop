@@ -1,0 +1,39 @@
+flask-03-handling-forms-and-sql-on-ec2-linux2
+--------------------------------------
+
+
+gklkn@Dell MINGW64 ~/Desktop/spring-git/clarusway-python-workshop (master)
+$ pip --version
+pip 20.0.2 from C:\Users\gklkn\anaconda3\lib\site-packages\pip (python 3.7)
+
+gklkn@Dell MINGW64 ~/Desktop/spring-git/clarusway-python-workshop (master)
+$ pip list
+
+gklkn@Dell MINGW64 ~/Desktop/spring-git/clarusway-python-workshop (master)
+$ pip install flask_sqlalchemy
+
+
+
+
+https://github.com/callahan-cw/clarusway-python-workshop/tree/master/hands-on/flask-03-handling-forms-and-sql-on-ec2-linux2
+
+
+
+
+
+
+curl localhost:5000
+
+curl -v localhost:5000
+
+
+GET method defaulttur. if you dont write anything. get can take the parameter from the query string. POST tan farkı bu
+http://127.0.0.1:5000/greet?user=Spring
+
+# and assign to the dynamic route of ('/<name>')
+@app.route('/<name>', methods=['GET'])
+def greet():
+
+# and assign to the static route of ('/greet')
+@app.route('/greet', methods=['GET'])
+def greet():
